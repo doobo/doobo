@@ -1,0 +1,1507 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Angular使用, 博客">
+    <meta name="description" content="记录日常用到的边边角角，悟已往之不谏，知来者之可追">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <title>Angular使用</title>
+    
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/5.11.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/animate.css/3.5.1/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/lightgallery/1.6.11/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css?t=1734079049717">
+    <link rel="stylesheet" type="text/css" href="/css/my.css?t=1734079049717">
+
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span"></span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/favicon.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name"></div>
+        <div class="logo-desc">
+            
+            记录日常用到的边边角角，悟已往之不谏，知来者之可追
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://gitee.com/doobo" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #C3A;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://gitee.com/doobo" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://cdn.staticfile.org/crypto-js/4.0.0/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <a class="a_index title" target="_blank">
+                    <h1 class="description center-align post-title">Angular使用</h1>
+                    </a>
+                    
+                    <script src="/js/auto/article.h.min.js"></script>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/tocbot/4.10.1/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/angular/">
+                                <span class="chip bg-color">angular</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/编程/" class="post-category">
+                                编程
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-05-23 13:33
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            
+            <script src="/js/auto/article.min.js"></script>
+            
+            <div id="articleContent">
+                <h2 id="初始化环境"><a href="#初始化环境" class="headerlink" title="初始化环境"></a>初始化环境</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g @angular/cli     <span class="token comment" spellcheck="true">#安装全局命令行</span>
+ng new ngapp                    <span class="token comment" spellcheck="true">#生成一个新项目</span>
+ng serve --open                 <span class="token comment" spellcheck="true">#启动服务器，热刷新</span>
+ng serve --proxy-config proxy.conf.json --host 0.0.0.0 --disable-host-check --port 4200 --live-reload-port 4201 <span class="token comment" spellcheck="true">#详细设置相关参数</span>
+ng serve --prod --env<span class="token operator">=</span>dev --proxy-config proxy.conf.json --host 0.0.0.0 --disable-host-check
+<span class="token comment" spellcheck="true"># 这是生产构建</span>
+ng build --target<span class="token operator">=</span>production --environment<span class="token operator">=</span>prod
+ng build --prod --env<span class="token operator">=</span>prod
+ng build --prod
+<span class="token comment" spellcheck="true"># 这是开发构建</span>
+ng build --target<span class="token operator">=</span>development --environment<span class="token operator">=</span>dev
+ng build --dev --e<span class="token operator">=</span>dev
+ng build --dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="常用开发命令-组件、服务、路由"><a href="#常用开发命令-组件、服务、路由" class="headerlink" title="常用开发命令-组件、服务、路由"></a>常用开发命令-组件、服务、路由</h2><pre class="line-numbers language-bash"><code class="language-bash">ng generate component heroes        <span class="token comment" spellcheck="true">#生成一个heroes组件，CLI 创建了一个新的文件夹 src/app/heroes/</span>
+ng generate component hero -it      <span class="token comment" spellcheck="true">#取消模板文件,创建内联模块</span>
+ng g c --inline-template<span class="token operator">=</span>true --inline-style<span class="token operator">=</span>true tab   <span class="token comment" spellcheck="true">#创建内联模块</span>
+ng generate <span class="token function">service</span> hero            <span class="token comment" spellcheck="true">#创建一个名叫 hero 的服务</span>
+ng generate <span class="token function">service</span> hero --module<span class="token operator">=</span>app   <span class="token comment" spellcheck="true">#创建服务,并把服务注入App组件中</span>
+    <span class="token comment" spellcheck="true">#把提供商添加到根模块上，以便在任何地方都使用服务的同一个实例</span>
+ng generate module app-routing --flat --module<span class="token operator">=</span>app <span class="token comment" spellcheck="true">#创建路由模块 </span>
+    <span class="token comment" spellcheck="true">#--flat 把这个文件放进了 src/app 中，而不是单独的目录中</span>
+    <span class="token comment" spellcheck="true">#--module=app 告诉 CLI 把它注册到 AppModule 的 imports 数组中</span>
+ng generate class hero              <span class="token comment" spellcheck="true">#创建一个类</span>
+<span class="token comment" spellcheck="true">#参考地址：https://github.com/angular/angular-cli/wiki/generate-component</span>
+<span class="token comment" spellcheck="true">#参考地址：https://www.npmjs.com/package/angular-cli-tools?activeTab=readme</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="页面常用指令"><a href="#页面常用指令" class="headerlink" title="页面常用指令"></a>页面常用指令</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">{</span><span class="token punctuation">{</span> hero.name <span class="token operator">|</span> uppercase <span class="token punctuation">}</span><span class="token punctuation">}</span>     <span class="token comment" spellcheck="true">#过滤器，转为大写，lowercase小写</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span>nullHero?.name<span class="token punctuation">}</span><span class="token punctuation">}</span>              <span class="token comment" spellcheck="true">#替换*ngIf检测空，a?.b?.c?.d</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token variable">$any</span><span class="token punctuation">(</span>hero<span class="token punctuation">)</span>.marker<span class="token punctuation">}</span><span class="token punctuation">}</span>           <span class="token comment" spellcheck="true">#{{$any(this).member}},访问组件中未声明过的成员</span>
+<span class="token punctuation">(</span>click<span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">"onSelect(hero)"</span>        <span class="token comment" spellcheck="true">#事件绑定方式</span>
+<span class="token operator">&lt;</span>a routerLink<span class="token operator">=</span><span class="token string">"/heroes"</span><span class="token operator">></span>H<span class="token operator">&lt;</span>/a<span class="token operator">></span>   <span class="token comment" spellcheck="true">#路由跳转方式</span>
+
+<span class="token punctuation">[</span><span class="token punctuation">(</span>ngModel<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"hero.name"</span>         <span class="token comment" spellcheck="true">#input的数据双向绑定</span>
+    <span class="token comment" spellcheck="true">#这两个的简写[ngModel]="hero.name" (ngModelChange)="setUppercaseName($event)"</span>
+    <span class="token comment" spellcheck="true">#import { FormsModule } from '@angular/forms';imports: [FormsModule]需要导入对应的包</span>
+<span class="token punctuation">[</span>ngClass<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"currentClasses"</span>      <span class="token comment" spellcheck="true">#绑定类样式 currentClasses = {'special':  this.isSpecial};</span>
+<span class="token punctuation">[</span>class.special<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"isSpecial"</span>     <span class="token comment" spellcheck="true">#单个样式开关</span>
+<span class="token punctuation">[</span>ngStyle<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"currentStyles"</span>       <span class="token comment" spellcheck="true">#绑定style对象{'font-style': this.canSave  ? 'italic' : 'normal'}</span>
+<span class="token punctuation">[</span>style.display<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"isSpecial ? 'block' : 'none'"</span>  <span class="token comment" spellcheck="true">#简单样式</span>
+<span class="token punctuation">[</span>style.visibility<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"isFirstVote?'visible':'hidden'"</span>
+<span class="token punctuation">[</span>innerHTML<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"aa"</span>                <span class="token comment" spellcheck="true">#插入HTML    </span>
+
+*ngFor<span class="token operator">=</span><span class="token string">"let hero of heroes;let i = index"</span>       <span class="token comment" spellcheck="true">#for循环语句</span>
+<span class="token punctuation">[</span>ngSwitch<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"currentHero.emotion"</span> --<span class="token operator">></span> *ngSwitchCase<span class="token operator">=</span><span class="token string">"'happy'"</span> --<span class="token operator">></span> *ngSwitchDefault
+
+<span class="token comment" spellcheck="true">#input事件</span>
+<span class="token punctuation">(</span>focus<span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">"getMatchInfo()"</span> <span class="token comment" spellcheck="true">#聚焦时执行 (blur)="getMatchInfo()" 失焦时执行</span>
+
+<span class="token comment" spellcheck="true">#组件内引入内容</span>
+<span class="token operator">&lt;</span>ng-content select<span class="token operator">=</span><span class="token string">"[ion-fixed],ion-fab"</span><span class="token operator">></span><span class="token operator">&lt;</span>/ng-content<span class="token operator">></span>
+<span class="token comment" spellcheck="true">#空占位符</span>
+<span class="token operator">&lt;</span>ng-container<span class="token operator">></span><span class="token operator">&lt;</span>/ng-container<span class="token operator">></span>
+<span class="token comment" spellcheck="true">#模板语法,封装指令,[IF]等</span>
+<span class="token operator">&lt;</span>ng-template<span class="token operator">></span><span class="token operator">&lt;</span>/ng-template<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Angular常用TS"><a href="#Angular常用TS" class="headerlink" title="Angular常用TS"></a>Angular常用TS</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#import {Input} from '@angular/core';</span>
+@Input<span class="token punctuation">(</span><span class="token punctuation">)</span> hero: Hero<span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">#父子组件通信方式，数据双向绑定,可放set方法上  @Input() set name(name: string){}</span>
+@Output<span class="token punctuation">(</span><span class="token string">'myClick'</span><span class="token punctuation">)</span> clicks       <span class="token comment" spellcheck="true">#绑定通知事件，并起别名‘myClick’</span>
+@ViewChild<span class="token punctuation">(</span>ChildenComponent<span class="token punctuation">)</span> child: ChildenComponent<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">#子组件实例引用</span>
+@ViewChild<span class="token punctuation">(</span><span class="token string">"child"</span><span class="token punctuation">)</span> child2<span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">#字符串,指向含有‘#child’的元素</span>
+@ViewChild<span class="token punctuation">(</span><span class="token string">'childB'</span>, <span class="token punctuation">{</span>read: ElementRef<span class="token punctuation">}</span><span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">#匹配元素,html元素</span>
+@ViewChild<span class="token punctuation">(</span><span class="token string">'childB'</span>, <span class="token punctuation">{</span>read: ViewContainerRef<span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#匹配元素,匹配视图容器</span>
+@ViewChild<span class="token punctuation">(</span><span class="token string">"refresher"</span><span class="token punctuation">)</span> divTop: ElementRef<span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">#获取html元素</span>
+<span class="token operator">&lt;</span>input <span class="token comment" spellcheck="true">#phone placeholder="phone number">       #模板引用变量,(click)="callPhone(phone.value)" === ref-phone</span>
+<span class="token comment" spellcheck="true">#heroForm="ngForm" --> &lt;button type="submit" [disabled]="!heroForm.form.valid">Submit&lt;/button></span>
+
+<span class="token comment" spellcheck="true">#滚动到指定锚点</span>
+@ViewChild<span class="token punctuation">(</span><span class="token string">"top"</span>,<span class="token punctuation">{</span>read: ElementRef<span class="token punctuation">}</span><span class="token punctuation">)</span> ticketEle<span class="token punctuation">;</span>
+this.top <span class="token operator">&amp;&amp;</span> this.top.nativeElement.scrollIntoView <span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">#滚动到选中的tab</span>
+scrollToSelect<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> selected <span class="token operator">=</span> this.ticketEle.nativeElement.querySelector<span class="token punctuation">(</span><span class="token string">".select"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    if<span class="token punctuation">(</span>selected<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> ofTop <span class="token operator">=</span> selected.offsetTop<span class="token punctuation">;</span>
+      this.scroll.nativeElement.scrollTo<span class="token punctuation">(</span>0,ofTop<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">#克隆页面元素</span>
+elementRef.nativeElement.cloneNode<span class="token punctuation">(</span>true<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#移除元素</span>
+element.parentNode <span class="token operator">&amp;&amp;</span> element.parentNode.removeChild<span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#允许自定义元素，icon-content等icon-header</span>
+@NgModule<span class="token punctuation">(</span><span class="token punctuation">{</span> schemas: <span class="token punctuation">[</span>CUSTOM_ELEMENTS_SCHEMA<span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#事件监听一</span>
+<span class="token function">import</span> <span class="token punctuation">{</span>Observable<span class="token punctuation">}</span> from <span class="token string">"rxjs"</span><span class="token punctuation">;</span>
+Observable.fromEvent<span class="token punctuation">(</span>this.ele.nativeElement, <span class="token string">'scroll'</span><span class="token punctuation">)</span>.subscribe<span class="token punctuation">((</span>event<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console.log<span class="token punctuation">(</span><span class="token string">'scroll'</span>,32<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">#事件监听二</span>
+<span class="token function">import</span> <span class="token punctuation">{</span>Renderer2<span class="token punctuation">}</span> from <span class="token string">"@angular/core"</span><span class="token punctuation">;</span>
+this.renderer.listen<span class="token punctuation">(</span>this.ele.nativeElement, <span class="token string">'click'</span>, <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console.log<span class="token punctuation">(</span><span class="token string">'click'</span>,27<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+//js阻止事件冒泡
+oEvent.cancelBubble <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+oEvent.stopPropagation<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+//js阻止链接默认行为，没有停止冒泡
+oEvent.preventDefault<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+<span class="token comment" spellcheck="true">#检测数据变化</span>
+<span class="token function">import</span> <span class="token punctuation">{</span>ChangeDetectorRef<span class="token punctuation">}</span> from <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+public cdf: ChangeDetectorRef
+this.cdf.detectChanges<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#angular6补充</span>
+ng g pipe service/date --module <span class="token punctuation">..</span>/router/bootstrap <span class="token comment" spellcheck="true">#以服务所在目录为根目录确定模块</span>
+ng g <span class="token function">service</span> service/http       <span class="token comment" spellcheck="true">#新建服务，可用模块名替代root</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="ES6常用语法"><a href="#ES6常用语法" class="headerlink" title="ES6常用语法"></a>ES6常用语法</h2><pre class="line-numbers language-bash"><code class="language-bash">heroes <span class="token operator">=</span><span class="token operator">></span> this.heroes <span class="token operator">=</span> heroes  <span class="token comment" spellcheck="true">#只有一个返回语句的函数</span>
+<span class="token punctuation">{</span> name <span class="token punctuation">}</span> as Hero                <span class="token comment" spellcheck="true">#把Name的值赋给Hero对象的Name属性</span>
+<span class="token punctuation">{</span>bbc<span class="token punctuation">}</span>                           <span class="token comment" spellcheck="true">#把bbc变量变成键值对bbc-value对象    </span>
+arrs.find<span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">></span> item <span class="token operator">==</span><span class="token operator">=</span> 1<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">#数组查找指定条件的值</span>
+heroes.filter<span class="token punctuation">(</span>h <span class="token operator">=</span><span class="token operator">></span> h <span class="token operator">!=</span><span class="token operator">=</span> hero<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#过滤数组，true时过滤掉,类似删除</span>
+oldArray.map<span class="token punctuation">(</span>entry <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token string">'abc:'</span> + entry<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">#生成新的数组，可把数组转对象等</span>
+/**
+ * 排序，false:倒序,默认从大到小
+ * @param <span class="token punctuation">{</span>string<span class="token punctuation">}</span> prop,<span class="token punctuation">{</span>boolean<span class="token punctuation">}</span> sc asc/desc
+ * @returns <span class="token punctuation">{</span>any<span class="token punctuation">}</span>
+ * this.sortArray<span class="token punctuation">(</span><span class="token string">'d30WinRatio'</span>,false<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ */
+sortArray<span class="token punctuation">(</span>prop: string,sc:boolean<span class="token operator">=</span>true<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    const sorted <span class="token operator">=</span> this.list.sort<span class="token punctuation">((</span>a, b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> a<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">></span> b<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> ? 1 <span class="token keyword">:</span> a<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">==</span><span class="token operator">=</span> b<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> ? 0 <span class="token keyword">:</span> -1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    if<span class="token punctuation">(</span><span class="token operator">!</span>sc<span class="token punctuation">)</span> sorted.reverse<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> sorted<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">#对象转数组--{a:1,b:2,c:3}--->[1,2,3]</span>
+<span class="token keyword">let</span> arr <span class="token operator">=</span> Object.keys<span class="token punctuation">(</span>this.typeData<span class="token punctuation">)</span>.map<span class="token punctuation">(</span>key<span class="token operator">=</span><span class="token operator">></span> this.typeData<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#对象拷贝增量赋值</span>
+class C<span class="token punctuation">{</span>
+    a<span class="token punctuation">;</span>
+    b<span class="token punctuation">;</span>
+    getA<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>return this.a<span class="token punctuation">}</span>
+    getB<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>return this.b<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> tmp <span class="token operator">=</span> new C<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>a:6,b:7<span class="token punctuation">}</span><span class="token punctuation">;</span>
+var res <span class="token operator">=</span> Object.assign<span class="token punctuation">(</span>tmp,obj,<span class="token punctuation">{</span>c:8<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//<span class="token punctuation">{</span>a:6,b:7,c:8<span class="token punctuation">}</span><span class="token punctuation">;</span> res <span class="token operator">==</span><span class="token operator">=</span> tmp<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="打包和优化"><a href="#打包和优化" class="headerlink" title="打包和优化"></a>打包和优化</h2><pre class="line-numbers language-bash"><code class="language-bash">ng build --prod --bh ./         <span class="token comment" spellcheck="true">#指定base href的值编译</span>
+ng build –prod –aot             <span class="token comment" spellcheck="true">#不压缩编译，生成map文件</span>
+ng build --prod --stats-json    <span class="token comment" spellcheck="true">#输出包体组成分析文件，生成 stats.json</span>
+ng build --prod --build-optimizer   <span class="token comment" spellcheck="true">#配合 UglifyJs 能够智能的移除未使用代码</span>
+ng <span class="token function">eject</span>                        <span class="token comment" spellcheck="true">#导出Webpack配置,.angular-cli.json添加"ejected": true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Angular的Rest风格部署"><a href="#Angular的Rest风格部署" class="headerlink" title="Angular的Rest风格部署"></a>Angular的Rest风格部署</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#静态网站，配置Nginx</span>
+location / <span class="token punctuation">{</span>
+    root   html/dist<span class="token punctuation">;</span>
+    try_files <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ /index.html <span class="token operator">=</span>404<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">#主要是这句</span>
+    index  index.html index.htm<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">#动态网站</span>
+app.use<span class="token punctuation">(</span>function <span class="token punctuation">(</span>req, res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console.log<span class="token punctuation">(</span>req.path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    if<span class="token punctuation">(</span>req.path.indexOf<span class="token punctuation">(</span><span class="token string">'/api'</span><span class="token punctuation">)</span><span class="token operator">>=</span>0<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        res.send<span class="token punctuation">(</span><span class="token string">"server text"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>else<span class="token punctuation">{</span> //angular启动页
+        res.sendfile<span class="token punctuation">(</span><span class="token string">'app/index.html'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="常用开发技巧"><a href="#常用开发技巧" class="headerlink" title="常用开发技巧"></a>常用开发技巧</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#命令行扩展工具</span>
+<span class="token function">npm</span> <span class="token function">install</span> angular-cli-tools -g    <span class="token comment" spellcheck="true">#命令行扩展工具</span>
+ngt g class <span class="token punctuation">[</span>class-name<span class="token punctuation">]</span>            <span class="token comment" spellcheck="true">#创建类</span>
+ngt g c <span class="token punctuation">[</span>component-name<span class="token punctuation">]</span>            <span class="token comment" spellcheck="true">#创建组建</span>
+ngt g d <span class="token punctuation">[</span>directive-name<span class="token punctuation">]</span>            <span class="token comment" spellcheck="true">#创建指令</span>
+ngt g e <span class="token punctuation">[</span>enum-name<span class="token punctuation">]</span>                 <span class="token comment" spellcheck="true">#创建枚举</span>
+ngt g h <span class="token punctuation">[</span>name<span class="token punctuation">]</span>                      <span class="token comment" spellcheck="true">#创建html</span>
+ngt g index                         <span class="token comment" spellcheck="true">#创建索引        </span>
+ngt g i <span class="token punctuation">[</span>interface-name<span class="token punctuation">]</span>            <span class="token comment" spellcheck="true">#创建接口</span>
+ngt g m <span class="token punctuation">[</span>module-name<span class="token punctuation">]</span>               <span class="token comment" spellcheck="true">#创建模块</span>
+ngt g p <span class="token punctuation">[</span>pipe-name<span class="token punctuation">]</span>                 <span class="token comment" spellcheck="true">#创建管道</span>
+ngt g r <span class="token punctuation">[</span>route-name<span class="token punctuation">]</span>                <span class="token comment" spellcheck="true">#创建动态路由</span>
+ngt g routing <span class="token punctuation">[</span>routing-name<span class="token punctuation">]</span>        <span class="token comment" spellcheck="true">#创建静态路由</span>
+ngt g s <span class="token punctuation">[</span>service-name<span class="token punctuation">]</span>e<span class="token punctuation">]</span>            <span class="token comment" spellcheck="true">#创建服务</span>
+ngt g style <span class="token punctuation">[</span>style-name<span class="token punctuation">]</span>            <span class="token comment" spellcheck="true">#创建样式</span>
+
+<span class="token comment" spellcheck="true">#添加延迟加载路由</span>
+<span class="token function">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span>  from <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token function">import</span> <span class="token punctuation">{</span> Routes, RouterModule <span class="token punctuation">}</span> from <span class="token string">'@angular/router'</span><span class="token punctuation">;</span>
+<span class="token function">import</span> <span class="token punctuation">{</span> ActivityComponent <span class="token punctuation">}</span> from <span class="token string">'./activity.component'</span><span class="token punctuation">;</span>
+const routes: Routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> path: <span class="token string">''</span>, component: ActivityComponent <span class="token punctuation">}</span>,
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+@NgModule<span class="token punctuation">(</span><span class="token punctuation">{</span>
+  imports: <span class="token punctuation">[</span> RouterModule.forChild<span class="token punctuation">(</span>routes<span class="token punctuation">)</span><span class="token punctuation">]</span>,
+  exports: <span class="token punctuation">[</span> RouterModule <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">export</span> class ActivityRouting<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+/*
+<span class="token punctuation">{</span>path: <span class="token string">'activity'</span>, loadChildren: <span class="token string">'./activity/activity.module#ActivityModule'</span><span class="token punctuation">}</span>,
+*/
+
+<span class="token comment" spellcheck="true">#常用示列</span>
+ngt update index --recursive    <span class="token comment" spellcheck="true">#更新当前目录和子目录的index索引</span>
+<span class="token comment" spellcheck="true">#模版文件安装配置</span>
+ngt <span class="token function">install</span> config              <span class="token comment" spellcheck="true">#在项目跟路径创建配置文件</span>
+ngt s ./login-form.module.ts -t:form-module <span class="token comment" spellcheck="true">#使用指定文件创建form模版</span>
+ngt g m <span class="token function">test</span> -t:form-module     <span class="token comment" spellcheck="true">#使用刚刚创建的模版去创建test模块</span>
+<span class="token comment" spellcheck="true">#ng更新后的命令，可以在当前目录创建对应的模块</span>
+ng update @angular/cli
+ng g c --inline-template<span class="token operator">=</span>true --inline-style<span class="token operator">=</span>true tab   <span class="token comment" spellcheck="true">#创建内联tab模块</span>
+ng g c tab -its         <span class="token comment" spellcheck="true">#上面命令简写</span>
+
+<span class="token comment" spellcheck="true">#路由参数获取</span>
+<span class="token comment" spellcheck="true">#route:ActivatedRoute 获取路由参数</span>
+route.snapshot.params<span class="token punctuation">[</span><span class="token string">'roomStatus'</span><span class="token punctuation">]</span>
+route.queryParams<span class="token punctuation">[</span><span class="token string">'roomStatus'</span><span class="token punctuation">]</span>
+this.router.navigate<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'/activity/puzzles/ranking'</span>, <span class="token punctuation">{</span>uid: 123, tid: res.model.id<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+routerLink<span class="token operator">=</span><span class="token string">"/activity/puzzles"</span>
+this.router.navigate<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'/login'</span><span class="token punctuation">]</span>,<span class="token punctuation">{</span> skipLocationChange: <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">#防止重复跳登陆页面，url不变</span>
+this.router.navigate<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'./ranking'</span><span class="token punctuation">]</span>,<span class="token punctuation">{</span>replaceUrl:true,relativeTo:this.currentRoute<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//Url改变,不添加到历史记录
+
+<span class="token comment" spellcheck="true">#监听当前页面路由变化，可以监听到历史回退</span>
+<span class="token function">import</span> <span class="token punctuation">{</span>debounceTime, filter, map, mergeMap<span class="token punctuation">}</span> from <span class="token string">"rxjs/operators"</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">#第一次加载不会触发--可放入init里面</span>
+this.subRouter <span class="token operator">=</span> this.router.events
+  .pipe<span class="token punctuation">(</span>filter<span class="token punctuation">(</span>event <span class="token operator">=</span><span class="token operator">></span> event instanceof NavigationEnd<span class="token punctuation">)</span>,map<span class="token variable"><span class="token punctuation">((</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> this.route<span class="token punctuation">))</span></span>
+  .pipe<span class="token punctuation">(</span>map<span class="token punctuation">(</span>route <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>route.firstChild<span class="token punctuation">)</span> route <span class="token operator">=</span> route.firstChild<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> route<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">))</span>
+  .pipe<span class="token punctuation">(</span>filter<span class="token punctuation">(</span>route <span class="token operator">=</span><span class="token operator">></span> route.outlet <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'primary'</span><span class="token punctuation">))</span>
+  .pipe<span class="token punctuation">(</span>mergeMap<span class="token punctuation">(</span>route <span class="token operator">=</span><span class="token operator">></span> route.params<span class="token punctuation">)</span>,debounceTime<span class="token punctuation">(</span>300<span class="token punctuation">))</span>
+  .subscribe<span class="token variable"><span class="token punctuation">((</span>event<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>{
+    if<span class="token punctuation">(</span>Number<span class="token punctuation">(</span>event.uid<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> Number<span class="token punctuation">(</span>event.type<span class="token punctuation">))</span></span><span class="token punctuation">{</span>
+      this.uid <span class="token operator">=</span> +event.uid<span class="token punctuation">;</span>
+      this.type <span class="token operator">=</span> +event.type<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#同路由页面替换URL参数，第一个不添加到历史记录，第二个会产生历史记录</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">(</span>window.history <span class="token operator">&amp;&amp;</span> history.pushState<span class="token punctuation">))</span><span class="token punctuation">{</span>
+  history.replaceState<span class="token punctuation">(</span><span class="token punctuation">{</span>uid: this.uid, type: this.type<span class="token punctuation">}</span>, <span class="token string">'活动排名页'</span>, `<span class="token comment" spellcheck="true">#/activity/puzzles/ranking;uid=${this.uid};type=${this.type}`);</span>
+<span class="token punctuation">}</span>else<span class="token punctuation">{</span>
+  //this.router.navigate<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'/activity/puzzles/ranking'</span>, <span class="token punctuation">{</span>uid: this.uid, type: this.type<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  this.router.navigate<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'./ranking'</span><span class="token punctuation">]</span>,<span class="token punctuation">{</span>replaceUrl:true,relativeTo:this.currentRoute<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//不添加到历史记录
+<span class="token punctuation">}</span>
+
+//rxjs防抖动函数
+<span class="token function">import</span> <span class="token punctuation">{</span>Subject<span class="token punctuation">}</span> from <span class="token string">"rxjs/Subject"</span><span class="token punctuation">;</span>
+<span class="token function">import</span> <span class="token punctuation">{</span>debounceTime, distinctUntilChanged<span class="token punctuation">}</span> from <span class="token string">'rxjs/operators'</span><span class="token punctuation">;</span>
+changeStream: Subject<span class="token operator">&lt;</span>string<span class="token operator">></span> <span class="token operator">=</span> new Subject<span class="token operator">&lt;</span>string<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+this.order <span class="token operator">=</span> this.order <span class="token operator">||</span>
+      this.changeStream
+          .pipe<span class="token punctuation">(</span>debounceTime<span class="token punctuation">(</span>2000<span class="token punctuation">))</span>
+          .pipe<span class="token punctuation">(</span>distinctUntilChanged<span class="token punctuation">(</span><span class="token punctuation">))</span>
+          .subscribe<span class="token punctuation">(</span>streetText <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+              //实际业务处理
+              console.log<span class="token punctuation">(</span>38<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">#调用方式</span>
+this.changeStream.next<span class="token punctuation">(</span>this.list<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="常用指令写法"><a href="#常用指令写法" class="headerlink" title="常用指令写法"></a>常用指令写法</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#时间格式化</span>
+<span class="token function">import</span> <span class="token punctuation">{</span> DatePipe <span class="token punctuation">}</span> from <span class="token string">'@angular/common'</span><span class="token punctuation">;</span>
+private datePipe: DatePipe
+this.datePipe.transform<span class="token punctuation">(</span>this.ticketInfo.flyTime, <span class="token string">'yyyy-MM-dd HH:mm'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#ng-container：特别对for循环和if同时使用时，特别有效</span>
+既不是一个Component，也不是一个Directive，只是单纯的一个特殊tag。ng-container可以直接包裹任何元素，包括文本，但本身不会生成元素标签，也不会影响页面样式和布局。包裹的内容，如果不通过其他指令控制，会直接渲染到页面中
+
+https://map.baidu.com/?qt<span class="token operator">=</span>cur<span class="token operator">&amp;</span>wd<span class="token operator">=</span>%E6%B7%B1%E5%9C%B3%E5%B8%82  //天气预报接口
+https://map.baidu.com/mobile/?qt<span class="token operator">=</span>loc<span class="token operator">&amp;</span>x<span class="token operator">=</span>113.9278992<span class="token operator">&amp;</span>y<span class="token operator">=</span>22.543741<span class="token operator">&amp;</span>pois<span class="token operator">=</span>1 //地理信息接口<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="IphoneX的样式兼容"><a href="#IphoneX的样式兼容" class="headerlink" title="IphoneX的样式兼容"></a>IphoneX的样式兼容</h2><pre class="line-numbers language-bash"><code class="language-bash">@media only <span class="token function">screen</span> and <span class="token punctuation">(</span>device-width: 375px<span class="token punctuation">)</span> and <span class="token punctuation">(</span>device-height: 812px<span class="token punctuation">)</span> and <span class="token punctuation">(</span>-webkit-device-pixel-ratio: 3<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        .iphoneTop .indexTop,
+        .iphoneTop .liveTop,
+        .iphoneTop .navBar<span class="token punctuation">{</span> padding-top: 44px<span class="token punctuation">;</span><span class="token punctuation">}</span>
+        .betBottomBar,.messageFixed<span class="token punctuation">{</span> bottom: 34px<span class="token punctuation">;</span><span class="token punctuation">}</span>
+        .iphoneTop .fixed_top_bar .title<span class="token punctuation">{</span> margin-top: 44px<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">#背景图平铺</span>
+.content-bg<span class="token punctuation">{</span>background: url<span class="token punctuation">(</span><span class="token punctuation">..</span>/images/bg_repeat.jpg<span class="token punctuation">)</span> repeat-y<span class="token punctuation">;</span>background-size: 100% auto<span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">#浏览器自带滚动条隐藏</span>
+html::-webkit-scrollBar<span class="token punctuation">{</span>display:none<span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">#解决输入框自动补全，黄色背景</span>
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active <span class="token punctuation">{</span>
+    -webkit-box-shadow: 0 0 0px 1000px <span class="token comment" spellcheck="true">#333 inset;</span>
+    transition: background-color 50000s ease-in-out 0s, color 5000s ease-in-out 0s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">#这种可以解决回退后，显示黄色的背景，完美解决</span>
+input:-webkit-autofill <span class="token punctuation">{</span>
+   -webkit-animation: autofill-fix 1s infinite<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+@-webkit-keyframes autofill-fix <span class="token punctuation">{</span>
+    from <span class="token punctuation">{</span>
+        background-color: transparent
+    <span class="token punctuation">}</span>
+    to <span class="token punctuation">{</span>
+        background-color: transparent
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">#加上spinner类能让p和div等块旋转</span>
+.spinner<span class="token punctuation">{</span>
+    -webkit-animation: spin 1s linear 1s 5 alternate<span class="token punctuation">;</span>
+    animation: spin 1s linear infinite<span class="token punctuation">;</span>
+    display: inline-block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+@-webkit-keyframes spin <span class="token punctuation">{</span>
+    from <span class="token punctuation">{</span>
+        -webkit-transform: rotate<span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    to <span class="token punctuation">{</span>
+        -webkit-transform: rotate<span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+@keyframes spin <span class="token punctuation">{</span>
+    from <span class="token punctuation">{</span>
+        transform: rotate<span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    to <span class="token punctuation">{</span>
+        transform: rotate<span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">#rem单位初始化--Ts</span>
+<span class="token keyword">declare</span> var window:any<span class="token punctuation">;</span>
+initWinPage<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    this.restWinPage<span class="token punctuation">(</span>window, window.lib <span class="token operator">||</span> <span class="token punctuation">(</span>window.lib <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+private restWinPage<span class="token punctuation">(</span>N, M<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> L<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> a <span class="token operator">=</span> I.getBoundingClientRect<span class="token punctuation">(</span><span class="token punctuation">)</span>.width<span class="token punctuation">;</span>
+        a / F <span class="token operator">></span> 540 <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>a <span class="token operator">=</span> 540 * F<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> d <span class="token operator">=</span> a / 7.5<span class="token punctuation">;</span>
+        I.style.fontSize <span class="token operator">=</span> d + <span class="token string">"px"</span>, D.rem <span class="token operator">=</span> N.rem <span class="token operator">=</span> d
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">let</span> K, J <span class="token operator">=</span> N.document, I <span class="token operator">=</span> J.documentElement, H <span class="token operator">=</span> J.querySelector<span class="token punctuation">(</span><span class="token string">'meta[name="viewport"]'</span><span class="token punctuation">)</span>,
+        G <span class="token operator">=</span> J.querySelector<span class="token punctuation">(</span><span class="token string">'meta[name="flexible"]'</span><span class="token punctuation">)</span>, F <span class="token operator">=</span> 0, E <span class="token operator">=</span> 0, D <span class="token operator">=</span> M.flexible <span class="token operator">||</span> <span class="token punctuation">(</span>M.flexible <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>H<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        // console.warn<span class="token punctuation">(</span><span class="token string">"将根据已有的meta标签来设置缩放比例"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> C <span class="token operator">=</span> H.getAttribute<span class="token punctuation">(</span><span class="token string">"content"</span><span class="token punctuation">)</span>.match<span class="token punctuation">(</span>/initial\-scale<span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">[</span>\d\.<span class="token punctuation">]</span>+<span class="token punctuation">)</span>/<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        C <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>E <span class="token operator">=</span> parseFloat<span class="token punctuation">(</span>C<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">)</span>, F <span class="token operator">=</span> parseInt<span class="token punctuation">(</span><span class="token string">''</span>+1 / E<span class="token punctuation">))</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>G<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> B <span class="token operator">=</span> G.getAttribute<span class="token punctuation">(</span><span class="token string">"content"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>B<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">let</span> A <span class="token operator">=</span> B.match<span class="token punctuation">(</span>/initial\-dpr<span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">[</span>\d\.<span class="token punctuation">]</span>+<span class="token punctuation">)</span>/<span class="token punctuation">)</span>, z <span class="token operator">=</span> B.match<span class="token punctuation">(</span>/maximum\-dpr<span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">[</span>\d\.<span class="token punctuation">]</span>+<span class="token punctuation">)</span>/<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                A <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>F <span class="token operator">=</span> parseFloat<span class="token punctuation">(</span>A<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">)</span>, E <span class="token operator">=</span> parseFloat<span class="token variable"><span class="token punctuation">((</span><span class="token number">1</span> <span class="token operator">/</span> F<span class="token punctuation">)</span>.toFixed<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">))</span></span><span class="token punctuation">)</span>, z <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>F <span class="token operator">=</span> parseFloat<span class="token punctuation">(</span>z<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">)</span>, E <span class="token operator">=</span> parseFloat<span class="token variable"><span class="token punctuation">((</span><span class="token number">1</span> <span class="token operator">/</span> F<span class="token punctuation">)</span>.toFixed<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">))</span></span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>F <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>E<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> y <span class="token operator">=</span> N.navigator.userAgent, x <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>y.match<span class="token punctuation">(</span>/android/gi<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token operator">!</span>y.match<span class="token punctuation">(</span>/iphone/gi<span class="token punctuation">))</span>,
+            w <span class="token operator">=</span> x <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token operator">!</span>y.match<span class="token punctuation">(</span>/OS 9_3/<span class="token punctuation">)</span>, <span class="token function">v</span> <span class="token operator">=</span> N.devicePixelRatio<span class="token punctuation">;</span>
+        F <span class="token operator">=</span> x ? <span class="token function">v</span> <span class="token operator">>=</span> 3 <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token operator">!</span>F <span class="token operator">||</span> F <span class="token operator">>=</span> 3<span class="token punctuation">)</span> ? 3 <span class="token keyword">:</span> <span class="token function">v</span> <span class="token operator">>=</span> 2 <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token operator">!</span>F <span class="token operator">||</span> F <span class="token operator">>=</span> 2<span class="token punctuation">)</span> ? 2 <span class="token keyword">:</span> 1 <span class="token keyword">:</span> 1, E <span class="token operator">=</span> 1 / F
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>I.setAttribute<span class="token punctuation">(</span><span class="token string">"data-dpr"</span>, F<span class="token punctuation">)</span>, <span class="token operator">!</span>H<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>H <span class="token operator">=</span> J.createElement<span class="token punctuation">(</span><span class="token string">"meta"</span><span class="token punctuation">)</span>, H.setAttribute<span class="token punctuation">(</span><span class="token string">"name"</span>, <span class="token string">"viewport"</span><span class="token punctuation">)</span>, H.setAttribute<span class="token punctuation">(</span><span class="token string">"content"</span>, <span class="token string">"initial-scale="</span> + E + <span class="token string">", maximum-scale="</span> + E + <span class="token string">", minimum-scale="</span> + E + <span class="token string">", user-scalable=no"</span><span class="token punctuation">)</span>, I.firstElementChild<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            I.firstElementChild.appendChild<span class="token punctuation">(</span>H<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> u <span class="token operator">=</span> J.createElement<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            u.appendChild<span class="token punctuation">(</span>H<span class="token punctuation">)</span>, J.write<span class="token punctuation">(</span>u.innerHTML<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    N.addEventListener<span class="token punctuation">(</span><span class="token string">"resize"</span>, <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        clearTimeout<span class="token punctuation">(</span>K<span class="token punctuation">)</span>, K <span class="token operator">=</span> setTimeout<span class="token punctuation">(</span>L, 300<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>, <span class="token operator">!</span>1<span class="token punctuation">)</span>, N.addEventListener<span class="token punctuation">(</span><span class="token string">"pageshow"</span>, <span class="token keyword">function</span> <span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        b.persisted <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>clearTimeout<span class="token punctuation">(</span>K<span class="token punctuation">)</span>, K <span class="token operator">=</span> setTimeout<span class="token punctuation">(</span>L, 300<span class="token punctuation">))</span>
+    <span class="token punctuation">}</span>, <span class="token operator">!</span>1<span class="token punctuation">)</span>, <span class="token string">"complete"</span> <span class="token operator">==</span><span class="token operator">=</span> J.readyState ? J.body.style.fontSize <span class="token operator">=</span> 12 * F + <span class="token string">"px"</span> <span class="token keyword">:</span> J.addEventListener<span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span>, <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        J.body.style.fontSize <span class="token operator">=</span> 12 * F + <span class="token string">"px"</span>
+    <span class="token punctuation">}</span>, <span class="token operator">!</span>1<span class="token punctuation">)</span>, L<span class="token punctuation">(</span><span class="token punctuation">)</span>, D.dpr <span class="token operator">=</span> N.dpr <span class="token operator">=</span> F, D.refreshRem <span class="token operator">=</span> L, D.rem2px <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> c:any <span class="token operator">=</span> parseFloat<span class="token punctuation">(</span>d<span class="token punctuation">)</span> * this.rem<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">"string"</span> <span class="token operator">==</span> typeof d <span class="token operator">&amp;&amp;</span> d.match<span class="token punctuation">(</span>/rem$/<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>c +<span class="token operator">=</span> <span class="token string">"px"</span><span class="token punctuation">)</span>, c
+    <span class="token punctuation">}</span>, D.px2rem <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> c:any <span class="token operator">=</span> parseFloat<span class="token punctuation">(</span>d<span class="token punctuation">)</span> / this.rem<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">"string"</span> <span class="token operator">==</span> typeof d <span class="token operator">&amp;&amp;</span> d.match<span class="token punctuation">(</span>/px$/<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>c +<span class="token operator">=</span> <span class="token string">"rem"</span><span class="token punctuation">)</span>, c
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">#iframe缩放问题</span>
+-webkit-transform: scaleY<span class="token punctuation">(</span>0.7<span class="token punctuation">)</span><span class="token punctuation">;</span>//Y轴方向，缩放0.6倍
+-webkit-transform-origin: 100% 100%<span class="token punctuation">;</span>//缩放在右下角对齐
+margin-top: -50px<span class="token punctuation">;</span>//负值margin从而把其位置摆正确，有时需要放到包在div的外面
+margin-left: -95px<span class="token punctuation">;</span>//如果用scale全部缩放，需要设置这个值
+<span class="token comment" spellcheck="true">#缩放示例</span>
+<span class="token punctuation">[</span>style.marginTop.px<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"cartoonHeight*0.2*-1"</span>
+<span class="token punctuation">[</span>style.marginLeft.px<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"cartoonWidth*0.2*-1"</span>
+style<span class="token operator">=</span><span class="token string">"transform: scale(0.8);-webkit-transform: scale(0.8);-webkit-transform-origin: 100% 100%;"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="SASS常用技巧"><a href="#SASS常用技巧" class="headerlink" title="SASS常用技巧"></a>SASS常用技巧</h2><pre class="line-numbers language-bash"><code class="language-bash">node-sass scss/app.scss css/app.css --output-style compressed    <span class="token comment" spellcheck="true">#编译并压缩代码，-w监听</span>
+node-sass -w -r scss -o css --output-style compressed             <span class="token comment" spellcheck="true">#监听scss目录，编译到css目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="cookie相关设置"><a href="#cookie相关设置" class="headerlink" title="cookie相关设置"></a>cookie相关设置</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#获取根域名，以便设置到根域名上，如 .baidu.com .google.com</span>
+<span class="token keyword">function</span> GetCookieDomain<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    var host <span class="token operator">=</span> location.hostname<span class="token punctuation">;</span>
+    var ip <span class="token operator">=</span> /^<span class="token punctuation">(</span>\d<span class="token punctuation">{</span>1,2<span class="token punctuation">}</span><span class="token operator">|</span>1\d\d<span class="token operator">|</span>2<span class="token punctuation">[</span>0-4<span class="token punctuation">]</span>\d<span class="token operator">|</span>25<span class="token punctuation">[</span>0-5<span class="token punctuation">]</span><span class="token punctuation">)</span>\.<span class="token punctuation">(</span>\d<span class="token punctuation">{</span>1,2<span class="token punctuation">}</span><span class="token operator">|</span>1\d\d<span class="token operator">|</span>2<span class="token punctuation">[</span>0-4<span class="token punctuation">]</span>\d<span class="token operator">|</span>25<span class="token punctuation">[</span>0-5<span class="token punctuation">]</span><span class="token punctuation">)</span>\.<span class="token punctuation">(</span>\d<span class="token punctuation">{</span>1,2<span class="token punctuation">}</span><span class="token operator">|</span>1\d\d<span class="token operator">|</span>2<span class="token punctuation">[</span>0-4<span class="token punctuation">]</span>\d<span class="token operator">|</span>25<span class="token punctuation">[</span>0-5<span class="token punctuation">]</span><span class="token punctuation">)</span>\.<span class="token punctuation">(</span>\d<span class="token punctuation">{</span>1,2<span class="token punctuation">}</span><span class="token operator">|</span>1\d\d<span class="token operator">|</span>2<span class="token punctuation">[</span>0-4<span class="token punctuation">]</span>\d<span class="token operator">|</span>25<span class="token punctuation">[</span>0-5<span class="token punctuation">]</span><span class="token punctuation">)</span>$/<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>ip.test<span class="token punctuation">(</span>host<span class="token punctuation">)</span> <span class="token operator">==</span><span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">||</span> host <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'localhost'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> host<span class="token punctuation">;</span>
+    var regex <span class="token operator">=</span> /<span class="token punctuation">(</span><span class="token punctuation">[</span>^<span class="token punctuation">]</span>*<span class="token punctuation">)</span>.*/<span class="token punctuation">;</span>
+    var match <span class="token operator">=</span> host.match<span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>typeof match <span class="token operator">!=</span><span class="token operator">=</span> <span class="token string">"undefined"</span> <span class="token operator">&amp;&amp;</span> null <span class="token operator">!=</span><span class="token operator">=</span> match<span class="token punctuation">)</span> host <span class="token operator">=</span> match<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>typeof host <span class="token operator">!=</span><span class="token operator">=</span> <span class="token string">"undefined"</span> <span class="token operator">&amp;&amp;</span> null <span class="token operator">!=</span><span class="token operator">=</span> host<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        var strAry <span class="token operator">=</span> host.split<span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>strAry.length <span class="token operator">></span> 1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            host <span class="token operator">=</span> strAry<span class="token punctuation">[</span>strAry.length - 2<span class="token punctuation">]</span> + <span class="token string">"."</span> + strAry<span class="token punctuation">[</span>strAry.length - 1<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token string">'.'</span> + host<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">#设置cookie</span>
+document.cookie <span class="token operator">=</span> cname + <span class="token string">"="</span> + cvalue + <span class="token string">"; expires="</span> + expires + <span class="token string">"; domain="</span> + GetCookieDomain<span class="token punctuation">(</span><span class="token punctuation">)</span> + <span class="token string">"; path=/"</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#过期，当前时间减去一秒，立即过期</span>
+expires <span class="token operator">=</span> <span class="token punctuation">(</span>new Date<span class="token punctuation">(</span><span class="token punctuation">)</span>.getTime<span class="token punctuation">(</span><span class="token punctuation">)</span> - 1000<span class="token punctuation">)</span><span class="token punctuation">;</span>
+document.cookie <span class="token operator">=</span> <span class="token string">"agentId"</span> + <span class="token string">"="</span> + <span class="token string">"123"</span> + <span class="token string">"; expires="</span> + <span class="token punctuation">(</span>new Date<span class="token punctuation">(</span><span class="token punctuation">)</span>.getTime<span class="token punctuation">(</span><span class="token punctuation">)</span> - 1000<span class="token punctuation">)</span> + <span class="token string">"; domain="</span> + GetCookieDomain<span class="token punctuation">(</span><span class="token punctuation">)</span> + <span class="token string">"; path=/"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://5fu8.com" rel="external nofollow noreferrer">didton</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info break">
+                    <a class="" href="https://5fu8.com/2019/05/23/17622004249/">https://5fu8.com/2019/05/23/17622004249/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://5fu8.com" target="_blank">didton</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      /*document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });*/
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/angular/">
+                                    <span class="chip bg-color">angular</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="qzone,wechat,weibo,douban,qq" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/01/29/16749649732/" target="_blank">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="日常怎样使用GIT">
+                        
+                        <span class="card-title">日常怎样使用GIT</span>
+                    </div>
+                </a>
+
+
+                <div class="card-content article-content">
+                    <a class="a_txt" href="/2023/01/29/16749649732/" target="_blank">
+                        <div class="summary block-with-text">
+                            
+                                同分支开发个人项目，小项目，基于这种方式使用GIT，也是初入编码时，使用的最对的方式。
+切换合并法基于特定分支切换出新分支，开发好功能，再合并到特定分支去；这种方法，特别适合那种很多人同时开发的大型项目，一个功能一个新的分支，也是在工作中用
+                            
+                        </div>
+                    </a>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-01-29
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/编程/" class="post-category">
+                                    编程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/GIT/">
+                        <span class="chip bg-color">GIT</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/05/23/17622004249/"  target="_blank">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Angular使用">
+                        
+                        <span class="card-title">Angular使用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <a class="a_txt" href="/2019/05/23/17622004249/" target="_blank">
+                        <div class="summary block-with-text">
+                            
+                                初始化环境npm install -g @angular/cli     #安装全局命令行
+ng new ngapp                    #生成一个新项目
+ng serve --open                 #
+                            
+                        </div>
+                    </a>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/编程/" class="post-category">
+                                    编程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/angular/">
+                        <span class="chip bg-color">angular</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.staticfile.org/tocbot/4.10.1/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        $tocAside.removeClass(expandedClass).hide();
+        
+    });
+</script>
+
+    
+
+</main>
+
+<script src="/js/auto/f.min.js"></script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    
+    <div class="container row center-align" style="margin-bottom: 10px !important;">
+        <div class="col s12 m8 l8 copy-right m12 l12">
+            
+                 <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                    <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备19063853号</a>
+                </span>
+            
+            &nbsp;&copy;
+            <span id="year">2019 – <span id="f_time">2024</span></span>
+            <a href="https://5fu8.com" target="_blank">didton</a>
+            |&nbsp;Powered by&nbsp;<a href="https://gitee.com/doobo/hexo-web" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="#" target="_blank">Matery</a>
+            
+            
+            
+            
+            
+            
+            <br>
+            <div class="footer-custom">
+                
+                <div style="width:300px;margin:0 auto;padding:5px 0;">
+                    <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030602003658"
+                       style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                        <img src="/images/beian.png" style="float:left;">
+                        <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#ffffff;">粤公网安备 44030602003658号</p>
+                    </a>
+                </div>
+                
+            </div>
+            
+            <div style="display: none">
+                <script type="text/javascript">
+                    document.write("<script type=\"text\/javascript\" src=\"https://s4.cnzz.com/z_stat.php?id=1278650874&web_id=1278650874\"><\/script>");
+                </script>
+            </div>
+            
+        </div>
+        
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+<script>
+    setTimeout(function () {
+        var year = new Date().getFullYear();
+        $("#f_time").text(year)
+    },100)
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.json", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <div class="wxmin">
+        <img src="/images/wxmin.jpg" />
+    </div>
+</div>
+
+
+    <script src="https://cdn.staticfile.org/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.staticfile.org/masonry/4.0.0/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="https://cdn.staticfile.org/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+    <script src="https://cdn.staticfile.org/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="https://cdn.staticfile.org/instant.page/3.0.0/instantpage.min.js" type="module"></script>
+    
+
+</body>
+
+</html>

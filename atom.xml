@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  
+  <subtitle>致最好的我们</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://5fu8.com/"/>
+  <updated>2024-12-13T02:12:20.224Z</updated>
+  <id>https://5fu8.com/</id>
+  
+  <author>
+    <name>didton</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>轻量级股票数据中台</title>
+    <link href="https://5fu8.com/2024/12/03/stock-analysis/"/>
+    <id>https://5fu8.com/2024/12/03/stock-analysis/</id>
+    <published>2024-12-03T14:51:00.000Z</published>
+    <updated>2024-12-13T02:12:20.224Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;轻量级股票数据中台&quot;&gt;&lt;a href=&quot;#轻量级股票数据中台&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="股票" scheme="https://5fu8.com/categories/%E8%82%A1%E7%A5%A8/"/>
+    
+    
+      <category term="stock" scheme="https://5fu8.com/tags/stock/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日常怎样使用GIT</title>
+    <link href="https://5fu8.com/2023/01/29/16749649732/"/>
+    <id>https://5fu8.com/2023/01/29/16749649732/</id>
+    <published>2023-01-29T04:05:00.000Z</published>
+    <updated>2023-01-29T04:05:07.547Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;同分支开发&quot;&gt;&lt;a href=&quot;#同分支开发&quot; class=&quot;headerlink&quot; title=&quot;同分支开发&quot;&gt;&lt;/a&gt;同分支开发&lt;/h2&gt;&lt;p&gt;个人项目，小项目，基于这种方式使用GIT，也是初入编码时，使用的最对的方式。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="https://5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="GIT" scheme="https://5fu8.com/tags/GIT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Angular使用</title>
+    <link href="https://5fu8.com/2019/05/23/17622004249/"/>
+    <id>https://5fu8.com/2019/05/23/17622004249/</id>
+    <published>2019-05-23T05:33:00.000Z</published>
+    <updated>2022-01-12T23:36:08.391Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;初始化环境&quot;&gt;&lt;a href=&quot;#初始化环境&quot; class=&quot;headerlink&quot; title=&quot;初始化环境&quot;&gt;&lt;/a&gt;初始化环境&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-bash&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="编程" scheme="https://5fu8.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="angular" scheme="https://5fu8.com/tags/angular/"/>
+    
+  </entry>
+  
+</feed>
